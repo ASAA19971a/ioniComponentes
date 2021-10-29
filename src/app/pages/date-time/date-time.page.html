@@ -1,0 +1,77 @@
+<app-header titulo="Date-Time"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Formato Fechas</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Mes</ion-label>
+      <ion-datetime
+        displayFormat="MMMM"
+        value="2012-12-15T13:47:20.789"
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Mes-Año</ion-label>
+      <ion-datetime display-format="MMMM.YYYY"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Disabled</ion-label>
+      <ion-datetime
+        displayFormat="MM DD YY"
+        disabled
+        value="1994-12-15"
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha Nacimiento</ion-label>
+      <ion-datetime
+        name="fechaNac"
+        value="1995-04-15"
+        min="1990-08-16"
+        max="2019"
+        [dayShortNames]="customDayShortNames"
+        displayFormat="DDD. MMM DD, YYYY"
+        monthShortNames="Ene, feb, mar, abril, mayo, jun, jul, ago, sep, oct, nov, dic"
+      ></ion-datetime>
+    </ion-item>
+    <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+      Enviar
+    </ion-button>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Datos Prueba</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Fecha Nacimiento</ion-label>
+      <ion-datetime
+        [value]="fechaActual.toISOString()"
+        displayFormat="YYYY MMMM DD"
+        (ionChange)="cambioFecha($event)"
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>Restricciones</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Min y Max</ion-label>
+      <ion-datetime
+        display-format="DD MMMM YYYY"
+        min="2018-01-01"
+        max="2025-12-31"
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Custom Options</ion-label>
+      <ion-datetime [pickerOptions]="customPickerOptions"></ion-datetime>
+    </ion-item>
+  </ion-list>
+</ion-content>

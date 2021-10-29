@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
-interface Componente {
-  icon: string;
-  name: string;
-  redirecTo: string;
+interface Listas {
+  titulo: string;
+  icono: string;
+  path: string;
 }
 
 @Component({
@@ -12,23 +12,59 @@ interface Componente {
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-  componentes: Componente[] = [
+  lista: Listas[] = [
     {
-      icon: 'american-football-outline',
-      name: 'Action Sheet',
-      redirecTo: '/action-sheet',
+      titulo: 'Action Sheet',
+      icono: 'american-football-outline',
+      path: '/action-sheet',
     },
     {
-      icon: 'alert-circle-outline',
-      name: 'Alert',
-      redirecTo: '/alert',
+      titulo: 'Alert',
+      icono: 'alert-outline',
+      path: '/alert',
     },
     {
-      icon: 'beaker-outline',
-      name: 'Avatar',
-      redirecTo: '/avatar',
+      titulo: 'Badges',
+      icono: 'albums-outline',
+      path: '/badge',
+    },
+    {
+      titulo: 'Buttons',
+      icono: 'radio-button-off-outline',
+      path: '/buttons',
+    },
+    {
+      titulo: 'Card',
+      icono: 'card-outline',
+      path: '/card',
+    },
+    {
+      titulo: 'Checkbox',
+      icono: 'checkbox-outline',
+      path: '/checkbox',
+    },
+    {
+      titulo: 'Chip',
+      icono: 'albums-outline',
+      path: '/chip',
+    },
+    {
+      titulo: 'Date Time',
+      icono: 'calendar-outline',
+      path: '/date-time',
+    },
+    {
+      titulo: 'Picker',
+      icono: 'albums-outline',
+      path: '/picker',
+    },
+    {
+      titulo: 'Fab',
+      icono: 'car-outline',
+      path: '/fab',
     },
   ];
+
   constructor() {}
 
   ngOnInit() {}
