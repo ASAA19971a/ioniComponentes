@@ -53,15 +53,22 @@ export class InicioPage implements OnInit {
       icono: 'calendar-outline',
       path: '/date-time',
     },
-    {
-      titulo: 'Picker',
-      icono: 'albums-outline',
-      path: '/picker',
-    },
+
     {
       titulo: 'Fab',
       icono: 'car-outline',
       path: '/fab',
+    },
+    {
+      titulo: 'Infinite Scroll',
+      icono: 'infinite-outline',
+      path: '/infinite-scroll',
+    },
+    //final
+    {
+      titulo: 'Picker',
+      icono: 'albums-outline',
+      path: '/picker',
     },
   ];
 
