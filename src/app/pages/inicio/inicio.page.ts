@@ -24,6 +24,11 @@ export class InicioPage implements OnInit {
       path: '/alert',
     },
     {
+      titulo: 'Avatar',
+      icono: 'person-circle-outline',
+      path: '/avatar',
+    },
+    {
       titulo: 'Badges',
       icono: 'albums-outline',
       path: '/badge',
