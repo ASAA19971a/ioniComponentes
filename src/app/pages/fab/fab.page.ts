@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fab.page.scss'],
 })
 export class FabPage implements OnInit {
-  //crear lista definimos un arreglo
-  arreglo = Array(100);
-  constructor() {}
 
-  ngOnInit() {}
+  data = Array(100);
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }

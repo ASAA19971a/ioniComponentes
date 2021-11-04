@@ -6,33 +6,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./date-time.page.scss'],
 })
 export class DateTimePage implements OnInit {
-  // definir fecha actual
-  fechaActual: Date = new Date();
 
-  // Personalizar picker
+  fechaNaci: Date = new Date();
+
+  customYearValues = [2025, 2020, 2016, 2008, 2004, 2000, 1996];
   customPickerOptions = {
     buttons: [
       {
-        text: 'Aceptar',
-        handler: (event) => {
+        text: 'Hola',
+        handler: ( event ) => {
           console.log(event);
-        },
+        }
       },
       {
-        text: 'Cancelar',
+        text: 'Mundo',
         handler: () => {
-          console.log('has cancelado');
-        },
+          console.log('log!')
+        }
       },
-    ],
-  };
-
-  constructor() {}
-
-  ngOnInit() {}
-
-  cambioFecha(event) {
-    console.log(event);
-    console.log(new Date(event.detail.value));
+    ]
   }
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  cambioFecha( event ) {
+
+    console.log(event);
+    console.log( new Date( event.detail.value ) );
+
+  }
+
 }

@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { DateTimePageRoutingModule } from './date-time-routing.module';
 
 import { DateTimePage } from './date-time.page';
-import { ComponentsModule } from 'src/app/components/components.module';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
@@ -15,8 +15,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
     FormsModule,
     IonicModule,
     DateTimePageRoutingModule,
-    ComponentsModule,
+    ComponentsModule
   ],
-  declarations: [DateTimePage],
+  declarations: [DateTimePage]
 })
 export class DateTimePageModule {}

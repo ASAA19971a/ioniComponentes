@@ -1,10 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { Componente } from '../../interfaces/interfaces';
+import { Observable } from 'rxjs';
+import { DataService } from '../../services/data.service';
 
-interface Listas {
-  titulo: string;
-  icono: string;
-  path: string;
-}
 
 @Component({
   selector: 'app-inicio',
@@ -12,67 +11,18 @@ interface Listas {
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-  lista: Listas[] = [
-    {
-      titulo: 'Action Sheet',
-      icono: 'american-football-outline',
-      path: '/action-sheet',
-    },
-    {
-      titulo: 'Alert',
-      icono: 'alert-outline',
-      path: '/alert',
-    },
-    {
-      titulo: 'Badges',
-      icono: 'albums-outline',
-      path: '/badge',
-    },
-    {
-      titulo: 'Buttons',
-      icono: 'radio-button-off-outline',
-      path: '/buttons',
-    },
-    {
-      titulo: 'Card',
-      icono: 'card-outline',
-      path: '/card',
-    },
-    {
-      titulo: 'Checkbox',
-      icono: 'checkbox-outline',
-      path: '/checkbox',
-    },
-    {
-      titulo: 'Chip',
-      icono: 'albums-outline',
-      path: '/chip',
-    },
-    {
-      titulo: 'Date Time',
-      icono: 'calendar-outline',
-      path: '/date-time',
-    },
 
-    {
-      titulo: 'Fab',
-      icono: 'car-outline',
-      path: '/fab',
-    },
-    {
-      titulo: 'Infinite Scroll',
-      icono: 'infinite-outline',
-      path: '/infinite-scroll',
-    },
-    //final
-    {
-      titulo: 'Picker',
-      icono: 'albums-outline',
-      path: '/picker',
-    },
-  ];
+  componentes: Observable<Componente[]>;
 
-  constructor() {}
+  constructor( private menuCtrl: MenuController,
+               private dataService: DataService ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.componentes = this.dataService.getMenuOpts();
+  }
+
+  mostrarMenu() {
+    this.menuCtrl.open('first');
+  }
+
 }
