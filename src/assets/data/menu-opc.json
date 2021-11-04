@@ -71,5 +71,10 @@
     "titulo": "Picker",
     "icono": "albums-outline",
     "path": "/picker"
+  },
+  {
+    "titulo": "Progress",
+    "icono": "code-working-outline",
+    "path": "/progress"
   }
 ]
