@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/"
+        text="Regresar"
+        color="secondary"
+      ></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-capitalize">List Reorder</ion-title>
+
+    <ion-button slot="end" (click)="reorderDisabled =!reorderDisabled">
+      Toggle
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- 1. creamos la lista en .ts     -->
+
+  <ion-list>
+    <ion-reorder-group
+      (ionItemReorder)="doReorder($event)"
+      [disabled]="reorderDisabled"
+    >
+      <ion-item *ngFor="let item of personajes">
+        <ion-label>{{item}}</ion-label>
+        <ion-reorder slot="end">
+          <ion-icon name="refresh-outline"></ion-icon>
+        </ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+</ion-content>

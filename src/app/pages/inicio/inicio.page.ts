@@ -71,9 +71,14 @@ export class InicioPage implements OnInit {
     },
 
     {
-      titulo: 'List',
+      titulo: 'List-sliding',
       icono: 'list-outline',
       path: '/list',
+    },
+    {
+      titulo: 'List-reorder',
+      icono: 'reorder-three-outline',
+      path: '/list-reorder',
     },
     //final
     {
