@@ -69,6 +69,12 @@ export class InicioPage implements OnInit {
       icono: 'infinite-outline',
       path: '/infinite-scroll',
     },
+
+    {
+      titulo: 'List',
+      icono: 'list-outline',
+      path: '/list',
+    },
     //final
     {
       titulo: 'Picker',

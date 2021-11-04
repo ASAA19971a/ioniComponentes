@@ -79,7 +79,11 @@ const routes: Routes = [
       import('./pages/infinite-scroll/infinite-scroll.module').then(
         (m) => m.InfiniteScrollPageModule
       ),
+  },  {
+    path: 'list',
+    loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
   },
+
 ];
 
 @NgModule({
