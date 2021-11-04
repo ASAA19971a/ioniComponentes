@@ -1,0 +1,75 @@
+[
+  {
+    "titulo": "Action Sheet",
+    "icono": "american-football-outline",
+    "path": "/action-sheet"
+  },
+  {
+    "titulo": "Alert",
+    "icono": "alert-outline",
+    "path": "/alert"
+  },
+  {
+    "titulo": "Avatar",
+    "icono": "person-circle-outline",
+    "path": "/avatar"
+  },
+  {
+    "titulo": "Badges",
+    "icono": "albums-outline",
+    "path": "/badge"
+  },
+  {
+    "titulo": "Buttons",
+    "icono": "radio-button-off-outline",
+    "path": "/buttons"
+  },
+  {
+    "titulo": "Card",
+    "icono": "card-outline",
+    "path": "/card"
+  },
+  {
+    "titulo": "Checkbox",
+    "icono": "checkbox-outline",
+    "path": "/checkbox"
+  },
+  {
+    "titulo": "Chip",
+    "icono": "albums-outline",
+    "path": "/chip"
+  },
+  {
+    "titulo": "Date Time",
+    "icono": "calendar-outline",
+    "path": "/date-time"
+  },
+
+  {
+    "titulo": "Fab",
+    "icono": "car-outline",
+    "path": "/fab"
+  },
+  {
+    "titulo": "Infinite Scroll",
+    "icono": "infinite-outline",
+    "path": "/infinite-scroll"
+  },
+
+  {
+    "titulo": "List-sliding",
+    "icono": "list-outline",
+    "path": "/list"
+  },
+  {
+    "titulo": "List-reorder",
+    "icono": "reorder-three-outline",
+    "path": "/list-reorder"
+  },
+
+  {
+    "titulo": "Picker",
+    "icono": "albums-outline",
+    "path": "/picker"
+  }
+]

@@ -1,12 +1,15 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
     <ion-title>Pagina Inicial</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let c of lista" [routerLink]="c.path" detail>
+    <ion-item *ngFor="let c of listamenu | async" [routerLink]="c.path" detail>
       <ion-icon [name]="c.icono" slot="start" color="primary"></ion-icon>
       {{c.titulo}}
     </ion-item>
